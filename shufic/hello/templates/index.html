@@ -1,0 +1,24 @@
+<html>
+
+	<head>
+		<title>
+			Flask
+		</title>
+	</head>
+
+	<body>
+		{% if name != "name" and lastname != "lastname" %}
+		<H4>Hello World {{ name }} / {{ lastname }} </H4>
+		{% else %}
+		<H1>Hello World </H1>
+		{% endif %}
+
+		{% for n in names %}
+		
+		<h2>{{ n }}</h2>
+
+		{% endfor %}
+
+	</body>
+
+</html>

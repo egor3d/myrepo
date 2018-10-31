@@ -1,0 +1,22 @@
+{% extends 'MainTemplates.html' %}
+{% block AllVideos %}
+
+    {% for con in content %}
+        <iframe width="853" height="480" src={{ con.0.Video_url }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <a href="/AllVideos/get/{{ con.0.id }}"><h1>{{ con.0.Video_name }}</h1></a>
+        <h6>{{ con.0.Video_properties }}</h6>
+        <h5>{{ con.0.Video_date }}</h5>
+        <h4>Video Likes  {{ con.0.Video_likos }}</h4>
+        <hr><br>
+        {% for com in con.1 %}
+        <h3>{{ com.Comments_text }}</h3>
+        <h5>{{ com.Comments_date }}</h5>
+        {% endfor %}
+        <hr>
+    {% endfor %}
+
+{% endblock %}
+
+
+
+
