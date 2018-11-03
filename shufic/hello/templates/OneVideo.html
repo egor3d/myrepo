@@ -1,6 +1,10 @@
 {% extends 'MainTemplates.html' %}
 {% load staticfiles %}
 {% block OneVideo %}
+<br>
+<div><a href="../../"> Вернуться ко всем видео </a></div>
+<br>
+<br>
 
 <iframe width="853" height="480" src={{ video.Video_url }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <h5>{{ video.Video_name }}</h5>
@@ -16,6 +20,9 @@
 
     <form action = "/AllVideos/AddComment/{{ video.id }}/" method = "POST"> {% csrf_token %} {{ Form }} <input type="submit" class="button" value="добавить коментарий"> </form>
 
-
+<br>
+<div><a href="../../"> Вернуться ко всем видео </a></div>
+<br>
+<br>
 
 {% endblock %}

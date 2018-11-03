@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import re_path, include
+from . import views
 
 
 urlpatterns = [
+    re_path(r'^$', views.index),
     re_path(r'admin/', admin.site.urls),
-    re_path(r'AllVideos/', include("hello.urls_hello")),
-    re_path(r'auth/', include("loginlogout.urls_log")),
+    re_path(r'AllVideos/', include("shufic.hello.urls_hello")),
+    re_path(r'auth/', include("shufic.loginlogout.urls_log")),
 ]

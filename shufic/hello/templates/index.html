@@ -1,24 +1,17 @@
-<html>
+{% extends 'MainTemplates.html' %}
+{% block OneVideo %}
 
-	<head>
-		<title>
-			Flask
-		</title>
-	</head>
 
-	<body>
-		{% if name != "name" and lastname != "lastname" %}
-		<H4>Hello World {{ name }} / {{ lastname }} </H4>
-		{% else %}
-		<H1>Hello World </H1>
-		{% endif %}
+<br>
+<br>
+<br>
+<br>
 
-		{% for n in names %}
-		
-		<h2>{{ n }}</h2>
+        <div align="center"><h1> Сайт АГОНЬ !!!!  </h1></div>
+<br>
+<br>
+        <div align="center"><a href="../../AllVideos" ><h2 style="color:orange;">Сюда, Видосы Ленинграда ! </h2></a></div>
+        <div align="center"><a href="../../admin"><h5 style="color:orange;">А сюда, только для админов ! </h5></a></div>
 
-		{% endfor %}
+{% endblock %}
 
-	</body>
-
-</html>

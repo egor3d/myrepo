@@ -1,10 +1,13 @@
 {% extends "MainTemplates.html" %}
 
 {% block login %}
-
+<br>
+<div><a href="../../"> Вернуться на главную страницу </a></div>
+<br>
+<br>
     <form action="/auth/login/" method="post">
         {% csrf_token %}
-        <label for="username">Имя пользователдя </label>
+        <label for="username">Имя пользователя </label>
         <input type="text" name="username" id="username">
         <label for="password">Пароль </label>
         <input type="password" name="password" id="password">
@@ -14,4 +17,6 @@
         <input class="button" type="submit" value="Войти">
 
     </form>
+
+
 {% endblock %}

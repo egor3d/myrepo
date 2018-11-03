@@ -22,7 +22,7 @@ def ShowVideos(request):
         oneVid = [vid]
         oneVid.append(Comments.objects.filter(Comments_Video_id=vid.id))
         content.append(oneVid)
-    return render(request, "AllVideos.html", {"content":content,"usename": auth.get_user(request).usename})
+    return render(request, "AllVideos.html", {"content":content,"username": auth.get_user(request).username})
 
 
 def ShowOneVideo(request, video_id):
@@ -32,7 +32,7 @@ def ShowOneVideo(request, video_id):
     args["video"] = Video.objects.get(id=video_id)
     args["Comments"] = Comments.objects.filter(Comments_Video_id=video_id)
     args["Form"] = comment_from
-    args["username"] = auth.get_user(request).usename
+    args["username"] = auth.get_user(request).username
     return render(request, "OneVideo.html", args)
 
 

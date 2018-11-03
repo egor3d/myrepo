@@ -25,14 +25,14 @@ SECRET_KEY = 'xz1_-gq15@fr%w7@f05@1d3(qun*2&b2^7g0zinhxc$j2pjl%9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["egor3d.pythonanywhere.com" ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'loginlogout',
-    'hello',
+    'shufic.loginlogout',
+    'shufic.hello',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'shufic.urls'
+ROOT_URLCONF = 'shufic.shufic.urls'
 
 TEMPLATES = [
     {
